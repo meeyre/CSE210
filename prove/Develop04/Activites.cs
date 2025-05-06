@@ -1,14 +1,14 @@
 using System;
 using System.IO;
 
-class Activites
+class Activities
 {
 private string _activityName;
 private int _duration;
 private string _description;
 private DateTime _endTime;
 
-public Activites(string name, int duration, string description){
+public Activities(string name, int duration, string description){
 _activityName = name;
 _duration = duration;
 _description = description;

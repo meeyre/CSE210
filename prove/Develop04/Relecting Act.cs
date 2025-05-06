@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-class ReflectingActivity : Activites
+class ReflectingActivity : Activities
 {
 private List<string> _prompts = new List<string>();
 private List<string> _questions = new List<string>(); 

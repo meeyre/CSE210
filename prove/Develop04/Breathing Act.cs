@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-class BreathingActivity : Activites
+class BreathingActivity : Activities
 {
 private int _breathTime;
 
