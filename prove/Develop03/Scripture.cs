@@ -36,7 +36,6 @@ class Scripture
                 _words[x].ClearWord(); //if not, it clears it
                 i += 1;
             }
-
         }
     }
     private void KillIfAllWordsCleared()
@@ -53,7 +52,6 @@ class Scripture
         {
             Environment.Exit(1);
         }
-
     }
     private bool CheckIfAllWordsCleared()
     { // duplicate of above function but it just doesn't kill, just returns true if all words are cleared

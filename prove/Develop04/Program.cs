@@ -12,24 +12,22 @@ it will just increment them each time you do an activity.
 class Program
 {
     static void Main(string[] args)
-    {   string fileName = "Log.txt";
+    {
+        string fileName = "Log.txt";
         string[] lines = System.IO.File.ReadAllLines(fileName);
-        
-
         string userResponse = "";
         int x = 0;
         Console.Clear();
-            int breathe = int.Parse(lines[0]); // read log data
-            int reflect = int.Parse(lines[1]);
-            int listing = int.Parse(lines[2]);
-        
-        while(userResponse != "5"){ // menu
-            
-
+        int breathe = int.Parse(lines[0]); // read log data
+        int reflect = int.Parse(lines[1]);
+        int listing = int.Parse(lines[2]);
+        while (userResponse != "5")
+        { // menu
             Console.WriteLine("Welcome to Mindfulness Program!");
             Console.Write("Menu:\n1. Breathing Activity\n2. Reflecting Activity\n3. Listing Activity\n4. View Activity Log\n5. Quit\n> ");
             userResponse = Console.ReadLine();
-            switch(userResponse){
+            switch (userResponse)
+            {
                 case "1":
                     Console.Write("How many seconds would you like to do Breathing Activity?\n> ");
                     x = int.Parse(Console.ReadLine());

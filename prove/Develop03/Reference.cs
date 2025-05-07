@@ -3,7 +3,6 @@ class Reference // Takes a scripture refrence string, splits it up into a bunch 
     private string _book;
     private int _chapter;
     private List<int> _verses = new List<int>();
-
     public Reference(string refText)
     { // splits up the refrence and makes a list of all the parts
         char[] splitters = [' ', ':'];
@@ -19,7 +18,6 @@ class Reference // Takes a scripture refrence string, splits it up into a bunch 
             rList[0] = rList[0] + ' ' + rList[1];
             rList.RemoveAt(1);
         }
-
         _book = rList[0];
         _chapter = int.Parse(rList[1]);
         if (rList[2].Contains('–'))
