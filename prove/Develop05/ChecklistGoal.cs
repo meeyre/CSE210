@@ -17,13 +17,16 @@ class ChecklistGoal : Goal
     public ChecklistGoal() : base() //if not loading from file, just use the new SetGoalData() method in the base constructor
     {
     }
-    public void SetBonus(int bonus){
+    public void SetBonus(int bonus)
+    {
         _bonus = bonus;
     }
-    public void SetTimesNeeded(int times){
+    public void SetTimesNeeded(int times)
+    {
         _timesNeededForBounus = times;
     }
-    public override void SetGoalData(){ //custom SetGoalData() method that also sets _bonus, _timesNeeded, and _timesDone
+    public override void SetGoalData()
+    { //custom SetGoalData() method that also sets _bonus, _timesNeeded, and _timesDone
         SetIsCompleted(false);
         _timesDone = 0;
         Console.Write("What is the name of this goal? ");
@@ -38,20 +41,25 @@ class ChecklistGoal : Goal
         SetBonus(int.Parse(Console.ReadLine()));
     }
     public override int CompleteGoal()
-    {   
+    {
         _timesDone++;
-        if (_timesDone == _timesNeededForBounus){ //gives you a bonus if you hit the goal ammount of times
+        if (_timesDone == _timesNeededForBounus)
+        { //gives you a bonus if you hit the goal ammount of times
             return base.CompleteGoal() + _bonus;
         }
-        else{
+        else
+        {
             return GetPointValue();
         }
     }
-    public override void DisplayGoal(){
-        if(GetIsCompleted()){ // two cases for if you have hit the goal amount of times or not
+    public override void DisplayGoal()
+    {
+        if (GetIsCompleted())
+        { // two cases for if you have hit the goal amount of times or not
             Console.WriteLine($"{_timesDone}/{_timesNeededForBounus} [x] {GetPointValue()} points ({_bonus} bonus) >> {GetGoalName()} : {GetGoalDes()}");
         }
-        else{
+        else
+        {
             Console.WriteLine($"{_timesDone}/{_timesNeededForBounus} [ ] {GetPointValue()} points ({_bonus} bonus) >> {GetGoalName()} : {GetGoalDes()}");
         }
     }
