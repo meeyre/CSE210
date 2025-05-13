@@ -1,0 +1,5 @@
+220
+~Complete HW|Do all of CSE 211 assignments|200|True
+50|3|2|~Eat meals|Eat 3 healthy meals a day|10|False
++~Read Scriptures|Read book of mormon|15|False
+-~sleep in|Sleep past my alarm|25|False
