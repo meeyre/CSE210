@@ -1,9 +1,12 @@
 using System;
+using System.IO;
 
 class Program
 {
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello FinalProject World!");
+        Crop c = new Crop();
+        
     }
 }
