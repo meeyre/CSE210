@@ -1,0 +1,5 @@
+1,wheat,0,400
+4,Tractor,283.33334,0
+5,Living Expenses,320,0
+3,matt,4800,0
+2,pig,28000,833.3334

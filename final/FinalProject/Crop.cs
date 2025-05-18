@@ -12,17 +12,28 @@ class Crop : Expenditure
     private int _irrigationFreq;
     private float _valuePerPlant;
     private int _growthTimeframe;
+    private string _cropName;
 
     public Crop() : base()
     {
-
+        
+    }
+    public Crop(string name, string cost, string value) : base(cost, value)
+    {
+        _cropName = name;
+    }
+    public override string Save()
+    {
+        return $"1,{_cropName}," + base.Save();
     }
 
     public override float UserCost()
     {
+        Console.Write("Input crop name: ");
+        _cropName = Console.ReadLine();
         _costSeed = GetFloatInput("Seed price per lb: $");
         _quantitySeed = GetFloatInput("lbs Seed: ");
-        _irrigationCost = GetFloatInput("How much does it cost to irrigate the planted field? ");
+        _irrigationCost = GetFloatInput("How much does it cost to irrigate the planted field? $");
         Console.Write("How many times will you need to irrigate per month? ");
         _irrigationFreq = int.Parse(Console.ReadLine());
         Console.Write("How many months will these seeds take to fully grow? ");
@@ -42,5 +53,9 @@ class Crop : Expenditure
         _expectedYeald = GetFloatInput("Estimated precent yeild: %") / (float)100;
         base.SetValue(_plants * _expectedYeald * _valuePerPlant / _growthTimeframe);
         return _plants * _expectedYeald * _valuePerPlant / _growthTimeframe;
+    }
+    public override string Display()
+    {
+        return $"{_cropName}:\nMonthly Cost: ${GetCost()}\nMonthly Value: ${GetValue()}\nMonthly Profit: ${GetValue() - GetCost()}";
     }
 }
