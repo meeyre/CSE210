@@ -8,7 +8,6 @@ class Labor : Expenditure
     private string _workerName;
     public Labor()
     {
-        
     }
     public Labor(string name, string cost, string value) : base(cost, value)
     {
@@ -34,6 +33,6 @@ class Labor : Expenditure
     }
     public override string Display()
     {
-       return $"{_workerName}:\nMonthly Cost: ${GetCost()}";
+        return $"{_workerName}:\nMonthly Cost: ${GetCost()}";
     }
 }

@@ -10,7 +10,6 @@ class Equiptment : Expenditure
     private string _equiptmentName;
     public Equiptment() : base()
     {
-        
     }
     public Equiptment(string name, string cost, string value) : base(cost, value)
     {

@@ -7,11 +7,9 @@ class LivingExpenses : Expenditure
     private float _services;
     public LivingExpenses()
     {
-        
     }
     public LivingExpenses(string name, string cost, string value) : base(cost, value)
     {
-    
     }
     public override string Save()
     {

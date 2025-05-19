@@ -11,7 +11,6 @@ class LiveStock : Expenditure
     private string _animalName;
     public LiveStock() : base()
     {
-        
     }
     public LiveStock(string name, string cost, string value) : base(cost, value)
     {

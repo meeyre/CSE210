@@ -27,10 +27,8 @@ function together in a list.
 */
 class Program
 {
-
     static void Main(string[] args)
     {
-        
         Farm f = new Farm();
         string fileName;
         string userResponse = "";
@@ -83,11 +81,11 @@ class Program
                         string[] parts = line.Split(",");
                         switch (parts[0])
                         {
-                            case "1": f.AddExpenditure(new Crop(parts[1],parts[2],parts[3])); break;
-                            case "2": f.AddExpenditure(new LiveStock(parts[1],parts[2],parts[3])); break;
-                            case "3": f.AddExpenditure(new Labor(parts[1],parts[2],parts[3])); break;
-                            case "4": f.AddExpenditure(new Equiptment(parts[1],parts[2],parts[3])); break;
-                            case "5": f.AddExpenditure(new LivingExpenses(parts[1],parts[2],parts[3])); break;
+                            case "1": f.AddExpenditure(new Crop(parts[1], parts[2], parts[3])); break;
+                            case "2": f.AddExpenditure(new LiveStock(parts[1], parts[2], parts[3])); break;
+                            case "3": f.AddExpenditure(new Labor(parts[1], parts[2], parts[3])); break;
+                            case "4": f.AddExpenditure(new Equiptment(parts[1], parts[2], parts[3])); break;
+                            case "5": f.AddExpenditure(new LivingExpenses(parts[1], parts[2], parts[3])); break;
                         }
                     }
                     break;

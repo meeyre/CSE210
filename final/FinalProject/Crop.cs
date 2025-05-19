@@ -13,10 +13,8 @@ class Crop : Expenditure
     private float _valuePerPlant;
     private int _growthTimeframe;
     private string _cropName;
-
     public Crop() : base()
     {
-        
     }
     public Crop(string name, string cost, string value) : base(cost, value)
     {
@@ -26,7 +24,6 @@ class Crop : Expenditure
     {
         return $"1,{_cropName}," + base.Save();
     }
-
     public override float UserCost()
     {
         Console.Write("Input crop name: ");
@@ -40,7 +37,6 @@ class Crop : Expenditure
         _growthTimeframe = int.Parse(Console.ReadLine());
         base.SetValue(((_costSeed / (float)_growthTimeframe) + (_irrigationCost * _irrigationFreq)));
         return (_costSeed / (float)_growthTimeframe) + (_irrigationCost * _irrigationFreq);
-
     }
     private float GetPlants()
     {

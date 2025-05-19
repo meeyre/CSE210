@@ -31,7 +31,7 @@ class Expenditure
             string[] lines = line.Split(".");
             if (lines.Count() == 2)
             {
-                y = (float)int.Parse(lines[0]) + (float)int.Parse(lines[1]) / (float)Math.Pow(10,lines[1].Length);
+                y = (float)int.Parse(lines[0]) + (float)int.Parse(lines[1]) / (float)Math.Pow(10, lines[1].Length);
                 x = 0;
             }
             else if (lines.Count() == 1)
@@ -53,13 +53,13 @@ class Expenditure
         string[] lines = line.Split(".");
         if (lines.Count() == 2)
         {
-            return (float)int.Parse(lines[0]) + (float)int.Parse(lines[1]) / (float)Math.Pow(10,lines[1].Length);
-            
+            return (float)int.Parse(lines[0]) + (float)int.Parse(lines[1]) / (float)Math.Pow(10, lines[1].Length);
+
         }
         else
         {
             return (float)int.Parse(lines[0]);
-            
+
         }
     }
 
@@ -85,7 +85,8 @@ class Expenditure
     {
         _value = value;
     }
-    public float GetCost() {
+    public float GetCost()
+    {
         return _cost;
     }
     public float GetValue()
